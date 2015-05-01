@@ -11,4 +11,8 @@ class PageController < ApplicationController
   	@titre = "Contact"
   end
   
+  def help
+  	@titre = "Aide"
+  end
+
 end
