@@ -8,6 +8,13 @@ describe PageController do
       get 'home'
       response.should be_success
     end
+
+    it "devrait avoir le bon titre" do
+      get 'home'
+      response.should have_selector("title",
+                        :content => "Simple App du Tutoriel Ruby on Rails | Accueil")
+    end
+
   end
 
   describe "GET 'contact'" do
@@ -15,6 +22,13 @@ describe PageController do
       get 'contact'
       response.should be_success
     end
+
+    it "devrait avoir le bon titre" do
+      get 'contact'
+      response.should have_selector("title",
+                        :content => "Simple App du Tutoriel Ruby on Rails | Contact")
+    end
+
   end
 
   describe "GET 'about'" do
@@ -22,6 +36,13 @@ describe PageController do
       get 'about'
       response.should be_success
     end
+
+    it "devrait avoir le bon titre" do
+      get 'about'
+      response.should have_selector("title",
+                        :content => "Simple App du Tutoriel Ruby on Rails | A propos")
+    end
+
   end
 
 end
